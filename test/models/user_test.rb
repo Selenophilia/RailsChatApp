@@ -1,8 +1,17 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  test "should go to index" do
-    get new_user_session_url
-    assert :success
+  setup do
+    @user = users(:user)
+   # byebug
+  end
+
+  test "should be valid" do
+    assert @user.valid?
+  end
+
+  test "name should be present" do
+    @user.email = "email@email.com"
+    assert @user.valid?
   end
 end
