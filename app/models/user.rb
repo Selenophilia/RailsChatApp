@@ -5,7 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :email, presence: true 
-  validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i,
-                 message: "Email invalid"  },uniqueness: { case_sensitive: false },
+  validates :email, uniqueness: { case_sensitive: false },
                 length: { minimum: 4 }
 end
