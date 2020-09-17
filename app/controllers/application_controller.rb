@@ -9,4 +9,6 @@ class ApplicationController < ActionController::Base
     #include :username 
     devise_parameter_sanitizer.permit(:sign_up, keys: [:email])
   end
+
+
 end
