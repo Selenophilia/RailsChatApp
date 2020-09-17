@@ -1,21 +1,43 @@
 class ChatroomController < ApplicationController    
+   before_action :load_chat_rooms
+
     def index
-        @messages = Message.all
+        @chatrooms = Chatroom.all
     end
 
     def new
-        @message = Message.new
+        @chatroom = Chatroom.new
     end
 
     def create
-        @message = Message.create(params.permit(:message_body, :user_id))
-        byebug
-        if @message.save               
-            redirect_to '/messages' 
+        @chatroom = Chatroom.create(load_params)
+        
+        if @chatroom.save               
+            redirect_to root_path
 
         else
-
-            redirect_to new_message_url    
+            render :new
         end 
+    end
+
+    def edit
+    
+    end
+
+    def show 
+        @room_message = Message.new chatroom: @chatroom 
+        @room_messages = @chatroom.messages.includes(:user)
+    
+    end
+
+    protected
+
+    def load_chat_rooms
+        @chatrooms = Chatroom.all 
+        @chatroom = Chatroom.find(params[:id]) if params[:id]
+    end
+
+    def load_params
+        params.permit(:name)
     end
 end
