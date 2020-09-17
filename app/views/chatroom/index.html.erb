@@ -1,1 +1,21 @@
-<h1>Chatroom index</h1>
+<div class="row mt-4">
+  <div class="col-12 col-md-3">
+    <%= render partial: 'chatroom' %>
+   </div> 
+  <div class="col">
+    <div class="alert alert-primary">
+      <h4 class="alert-heading">
+        Welcome <%= current_user.username%>!
+      </h4>
+
+      <p>
+        lorem ipsum dolor.
+      </p>
+
+      <hr />
+
+      <p>
+        You can create or join a room from the sidebar.
+      </p>
+    </div>
+</div>

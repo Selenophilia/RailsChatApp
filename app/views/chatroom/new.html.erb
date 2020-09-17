@@ -1,0 +1,23 @@
+<%# <h1>Create new room</h1> %>
+
+
+<div class="container mt-5 mr-5">
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-body">
+                 <%= form_tag create_chatroom_path do %>
+                         <h3 class="text-center font-bold py-4"><strong>Create New Room</strong></h3>
+                                <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                             <span class="input-group-text" id="inputGroup-sizing-default"><i class="fa fa-comment"></i></span>
+                                        </div>
+                                            <%= text_field_tag  :name,"",placeholder: "Enter Roomname...",class: "form-control" %>                  
+                                </div>
+                                <div class="text-center py-4">
+                                    <%= submit_tag "Create Room", class: "btn btn-primary" %>
+                                </div>
+                 <%end%>                       
+            </div>
+        </div>
+    </div>
+</div>
