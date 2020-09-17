@@ -1,0 +1,17 @@
+require 'test_helper'
+
+class MessageTest < ActiveSupport::TestCase
+  setup do
+    @message = messages(:messages)
+  end
+
+  test "1. should not create message if message_body is nil" do
+     @message.message_body = ""
+     assert_not @message.save
+  end
+
+  test "2. should not create message if users_id is nil" do
+    @message.users_id = ""
+    assert_not @message.save
+ end
+end
