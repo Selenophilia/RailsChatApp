@@ -7,8 +7,14 @@
 
       <div class="form-group">
           <div class="input-group">
-              <%= f.email_field :email,placeholder:"Email", autofocus: true, autocomplete: "email", class:"form-control" %>
+              <%= f.email_field :email,placeholder:"Enter Email", autofocus: true, autocomplete: "email", class:"form-control" %>
           </div>
+      </div>
+
+      <div class="form-group">
+          <div class="input-group">
+            <%= f.text_field :username,placeholder: "Enter username..." , autocomplete: "username",autofocus: true, class:"form-control" %>
+        </div>
       </div>
 
       <div class="form-group">
