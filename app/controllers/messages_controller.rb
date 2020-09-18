@@ -1,15 +1,13 @@
 class MessagesController < ApplicationController
-    before_action :load_chat_rooms, only: [:create]
 
-    def create
-      @chatroom_message = Message.create( user: current_user,                               
-                                          chatroom: load_chat_rooms,        
-                                          message_body: params.dig(:message, :message_body))
+  def create
+    @message = current_user.messages.create(user: current_user,
+                                            message_body:  params.dig(:message, :message_body))
+    if @message.save
+         redirect_to messages_path
+    else
+      flash.now[:alert] = 'error while creating message'
+      redirect_to messages_path
     end
-
-    protected
-    def load_chat_rooms
-      Chatroom.find(params.dig(:message, :chatroom_id))
-    end 
-
+  end
 end
