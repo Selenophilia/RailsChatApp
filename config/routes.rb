@@ -17,7 +17,4 @@ Rails.application.routes.draw do
 
   post '/messages'    => 'messages#create', as: 'messages'
   
-  #resources :chatroom  
-  #resources :messages
-
 end
