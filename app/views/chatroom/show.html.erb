@@ -11,14 +11,14 @@
   <div class="col">
     <div class="chat" data-channel-subscribe="chatroom" data-chatroom-id="<%= @chatroom.id %>">
       <% @chatroom_messages.each do |message| %>
-       <div class="chat-message-container">
+       <div class="chat__message__container">
           <div class="row no-gutters">
             <div class="col-auto text-center">
                 <i class="fa fa-user-circle"></i>
             </div>
 
           <div class="col">
-              <div class="message-content">
+              <div class="message__content">
                 <p class="mb-1">
                   <%= message.message_body %>
                 </p>
@@ -41,7 +41,7 @@
                                  wrapper: false,
                                  label: false,
                                  input_html: {
-                                   class: 'chat-input',
+                                   class: 'chat__input',
                                    autocomplete: 'off'
                                  } %>
         <div class="input-group-append">

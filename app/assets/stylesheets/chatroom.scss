@@ -47,6 +47,10 @@ i{
   }
 }
 
+.body{
+  background-color: #f5f5f5;
+}
+
 
 .chat {
   border: 1px solid lighten(#C0C0C0, 20%);
@@ -55,14 +59,14 @@ i{
   border-radius: 5px 5px 0 0;
   overflow-y: auto;
 
-  .chat-message-container {
+  .chat__message__container {
     padding: 5px;
   
     .avatar {
       margin: 5px;
     }
   
-    .message-content {
+    .message__content {
       padding: 5px;
       border: 1px solid $messagebox;
       border-radius: 5px;
@@ -71,13 +75,13 @@ i{
       width: 50%;
     }
   
-    & + .chat-message-container {
+    & + .chat__message-container {
       margin-top: 10px;
     }
   }
 }
 
-.chat-input {
+.chat__input {
   border-top: 0 none;
   border-radius: 0 0 5px 5px;
 }
