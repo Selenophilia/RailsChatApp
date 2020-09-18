@@ -1,14 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 # one:
-#   users: 
+#   chatroom: one
+#   user: one
 #   message_body: MyString
 
 # two:
-#   users: 
+#   chatroom: two
+#   user: two
 #   message_body: MyString
 
 messages:
-    users_id: 1
-    message_body: "first message"  
-  
+  chatroom_id: 1
+  user_id: 1
+  message_body: "first message"  
+
