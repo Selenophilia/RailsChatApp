@@ -1,5 +1,5 @@
 class ChatroomController < ApplicationController    
-   before_action :load_chat_rooms
+   before_action :load_chat_rooms, only: [:show ]
 
     def index
         @chatrooms = Chatroom.all
@@ -25,16 +25,18 @@ class ChatroomController < ApplicationController
     end
 
     def show 
-        @room_message = Message.new chatroom: @chatroom 
-        @room_messages = @chatroom.messages.includes(:user)
-    
+        #byebug
+        @chatroom_message = Message.new chatroom: @chatroom 
+        
+        @chatroom_messages = @chatroom.messages.includes(:user)
     end
 
     protected
 
     def load_chat_rooms
         @chatrooms = Chatroom.all 
-        @chatroom = Chatroom.find(params[:id]) if params[:id]
+
+        @chatroom = Chatroom.find(params[:id]) 
     end
 
     def load_params
