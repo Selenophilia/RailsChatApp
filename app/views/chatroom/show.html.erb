@@ -9,18 +9,18 @@
   </div>
 
   <div class="col">
-    <div class="chat" data-channel-subscribe="chatroom" data-room-id="<%= @chatroom.id %>">
-      <% @room_messages.each do |message| %>
-        <div class="chat-message-container">
+    <div class="chat" data-channel-subscribe="chatroom" data-chatroom-id="<%= @chatroom.id %>">
+      <% @chatroom_messages.each do |message| %>
+       <div class="chat-message-container">
           <div class="row no-gutters">
             <div class="col-auto text-center">
-                <i class="fa fa-user"></i>
+                <i class="fa fa-user-circle"></i>
             </div>
 
-            <div class="col">
+          <div class="col">
               <div class="message-content">
                 <p class="mb-1">
-                  <%= message.message %>
+                  <%= message.message_body %>
                 </p>
 
                 <div class="text-right">
@@ -35,7 +35,7 @@
       <% end %>
     </div>
 
-    <%= simple_form_for @room_message, remote: true do |form| %>
+    <%= simple_form_for @chatroom_message, remote: true do |form| %>
       <div class="input-group mb-3">
         <%= form.input :message_body, as: :string,
                                  wrapper: false,
