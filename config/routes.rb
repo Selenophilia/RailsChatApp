@@ -10,11 +10,14 @@ Rails.application.routes.draw do
   get '/chatroom/new' => 'chatroom#new', as: 'new_chatroom'
   post '/chatroom'    => 'chatroom#create', as: 'create_chatroom'
   get  '/chatroom/:id' => 'chatroom#show', as: 'show_chatroom'
-  get '/chatroom/:id/edit ' => 'chatroom#edit', as: 'edit_chatroom'
+  get '/chatroom/:id/edit' => 'chatroom#edit', as: 'edit_chatroom'
   patch '/chatroom/:id'   => 'chatroom#update', as: 'update_chatroom'
   delete '/chatroom/:id' => 'chatroom#destroy', as: 'delete_chatroom'
 
-  #  resources :chatroom
- 
- resources :messages
+
+  post '/messages'    => 'messages#create', as: 'messages'
+  
+  #resources :chatroom  
+  #resources :messages
+
 end
