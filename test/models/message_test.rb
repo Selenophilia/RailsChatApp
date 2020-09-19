@@ -13,10 +13,5 @@ class MessageTest < ActiveSupport::TestCase
   test "2. should not create message if user_id is nil" do
     @message.user_id = ""
     assert_not @message.save
- end
-
- test "3. should not create message if chatroom_id is nil" do
-    @message.chatroom_id = ""
-    assert_not @message.save
   end
 end
