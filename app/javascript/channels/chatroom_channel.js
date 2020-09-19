@@ -21,7 +21,7 @@ consumer.subscriptions.create("ChatroomChannel", {
 });
 
 
-let scroll_bottom = () =>  {
+const scroll_bottom = () =>  {
   let obj = document.querySelector('#message-container')
 
   let scroll_bottom = document.querySelector('#message-container').scrollHeight
