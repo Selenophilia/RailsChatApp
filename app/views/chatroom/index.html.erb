@@ -1,6 +1,5 @@
  <div class="col mt-5">
     <div class="chat" data-channel-subscribe="chatroom" data-user-id="<%= current_user %>">
-      <%# <% @messages.each do |message| %>
        <div class="chat__message__container">
           <div class="row no-gutters">
             <div class="col-auto text-center">
@@ -11,7 +10,6 @@
             </div>
           </div>
         </div>
-      <%# <% end %>  
     </div>
 
     <%= simple_form_for @message_new, remote: true do |form| %>
