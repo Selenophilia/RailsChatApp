@@ -1,28 +1,17 @@
  <div class="col mt-5">
     <div class="chat" data-channel-subscribe="chatroom" data-user-id="<%= current_user %>">
-      <% @messages.each do |message| %>
+      <%# <% @messages.each do |message| %>
        <div class="chat__message__container">
           <div class="row no-gutters">
             <div class="col-auto text-center">
                 <i class="fa fa-user-circle fa-5x"></i>
             </div>
-
-          <div class="col">
-              <div class="message__content">
-                <p class="mb-1">
-                  <%= message.message_body %>
-                </p>
-
-                <div class="text-right">
-                  <small>
-                    <%= message.created_at %>
-                  </small>
-                </div>
-              </div>
+            <div class="col">
+                <%= render @messages %>
             </div>
           </div>
         </div>
-      <% end %>
+      <%# <% end %>  
     </div>
 
     <%= simple_form_for @message_new, remote: true do |form| %>
