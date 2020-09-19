@@ -10,7 +10,9 @@ consumer.subscriptions.create("ChatroomChannel", {
   },
 
   received(data) {
+    let input = document.querySelector('input[type="text"]')
     // Called when there's incoming data on the websocket for this channel
     $('#message-container').append(data.mod_message)
+    $('#message_message_body').val('')
   }
 });

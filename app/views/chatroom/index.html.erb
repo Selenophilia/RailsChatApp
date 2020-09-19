@@ -1,19 +1,10 @@
  <div class="col mt-5">
-    <div class="chat" data-channel-subscribe="chatroom" data-user-id="<%= current_user %>">
-       <div class="chat__message__container">
-          <div class="row no-gutters">
-            <div class="col-auto text-center">
-                <i class="fa fa-user-circle fa-5x"></i>
-            </div>
-            <div class="col">
-                <%= render @messages %>
-            </div>
-          </div>
-        </div>
+    <div class="chat" data-channel-subscribe="chatroom" id="message-container" data-user-id="<%= current_user %>">
+        <%= render @messages%>     
     </div>
 
     <%= simple_form_for @message_new, remote: true do |form| %>
-      <div class="input-group mb-3">
+      <div class="input-group mb-3" id="message-content">
         <%= form.input :message_body, as: :string,
                                  wrapper: false,
                                  label: false,
