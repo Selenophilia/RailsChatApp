@@ -1,6 +1,7 @@
 class ChatroomController < ApplicationController    
     def index        
-        @messages = Message.all
-        @message_new = Message.new
+        @users          = User.where.not(id: current_user.id)  
     end
+
+
 end

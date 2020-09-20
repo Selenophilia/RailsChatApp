@@ -1,7 +1,10 @@
 class MessagesController < ApplicationController
+   before_action :load_params, only: [ :create, :show ]
 
   def create
-    @message = current_user.messages.create(user: current_user,
+    #byebug
+    @message = current_user.messages.create(user: current_user, 
+                                            conversation_id: params.dig(:message, :conversation_id),
                                             message_body:  params.dig(:message, :message_body))
     if @message.save
          ActionCable.server.broadcast "chatroom_channel",
@@ -12,8 +15,22 @@ class MessagesController < ApplicationController
     end
   end
 
+  def show
+    #byebug
+    @message_new    = Message.new
+    @messages = @conversation.messages
+    #@messages = Message.all
+  end
+
+
   private
   def message_render(message)
         render(partial: 'message', locals: {message: message})
   end
+
+  def load_params
+    @users              = User.where.not(id: current_user.id)
+    @conversation       = Conversation.find_by(id: params[:conversation_id])
+  end 
+
 end
