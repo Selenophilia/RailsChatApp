@@ -6,7 +6,15 @@ Rails.application.routes.draw do
 
   root controller: :chatroom, action: :index
   get '/messages' =>'chatroom#index', as: 'messages_index'
-  post '/messages'    => 'messages#create', as: 'messages'
   
+  post '/messages'    => 'messages#create', as: 'messages'
+  get 'messages/t/:conversation_id' => 'messages#show', as: 'messages_show'
+
+  post '/conversations' => 'conversation#create', as: 'create_conversation_messages'
+
+
+  # resources :conversations do
+  #   resources :messages
+  #  end
 
 end
