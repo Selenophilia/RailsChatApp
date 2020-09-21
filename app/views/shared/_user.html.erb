@@ -2,7 +2,11 @@
     <h1 class="display-4"> Inbox </h1>
       <nav class="nav flex-column">
         <% @users.each do |user| %>
-                  <%= link_to user.username , create_conversation_messages_path(sender_id: current_user.id, recipient_id: user.id),class: "nav-link room-nav-link", method: :post%>
-        <% end %>
+            <div class="col-auto nav-link room-nav-link">
+                    <img class="gravatar" src="https://s.gravatar.com/avatar/ea8be90cf21a6f11a0e5a1cd9b9ebc47?s=80">
+                    <%= link_to user.username , create_conversation_messages_path(sender_id: current_user.id, recipient_id: user.id), method: :post%> 
+                   
+               </div>
+        <% end %>    
       </nav>
 </div>
