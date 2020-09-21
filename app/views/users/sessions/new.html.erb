@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag "login", media: "all", "data-turbolinks-track" => "reload" %> 
 <div class="login__form">		
+    <%= render "users/shared/error_messages", resource: resource %>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-         <%= render "users/shared/error_messages", resource: resource %>
           <h2> Log In </h2>
           <div class="form-group">
             <div class="input-group"> 
