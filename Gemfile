@@ -33,6 +33,9 @@ gem 'jquery-rails'
 gem 'simple_form'
 #font-awesome
 gem "font-awesome-rails"
+#gravatar
+gem 'gravtastic'
+gem 'gravatarify', '~> 3.0.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
