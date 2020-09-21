@@ -16,9 +16,9 @@ class MessagesController < ApplicationController
   end
 
   def show
-    #byebug
     @message_new    = Message.new
-    @messages = @conversation.messages
+    @messages       = @conversation.messages
+
   end
 
 
@@ -29,7 +29,8 @@ class MessagesController < ApplicationController
 
   def load_params
     @users              = User.where.not(id: current_user.id)
-    @conversation       = Conversation.find_by(id: params[:conversation_id])
+    @conversation       = Conversation.find_by(id: params[:conversation_id]) 
+
   end 
 
 end
