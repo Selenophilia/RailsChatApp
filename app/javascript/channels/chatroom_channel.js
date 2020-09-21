@@ -27,5 +27,4 @@ const scroll_bottom = () =>  {
   let scroll_bottom = document.querySelector('#message-container').scrollHeight
       
   obj.scrollTop = scroll_bottom;
-
 }
