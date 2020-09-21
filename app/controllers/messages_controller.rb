@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
                                         mod_message: message_render(@message)
     else
       flash.now[:alert] = 'error while creating message'
-      redirect_to messages_path
+      redirect_to messages_show_path
     end
   end
 
@@ -19,7 +19,6 @@ class MessagesController < ApplicationController
     #byebug
     @message_new    = Message.new
     @messages = @conversation.messages
-    #@messages = Message.all
   end
 
 
