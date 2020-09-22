@@ -2,66 +2,64 @@
 
 <div class="row">
    <div class="col-12 col-md-3">
-    <%= render partial: 'shared/user' %>
+      <%= render partial: 'shared/user' %>
    </div>
-   <div class="col ">
+   <div class="col">
     <div class="wrapper">
-
-  <div class="profile-card js-profile-card">
-    <div class="profile-card__img">
-            <img src="https://s.gravatar.com/avatar/ea8be90cf21a6f11a0e5a1cd9b9ebc47?s=80">
-    </div>
-
-    <div class="profile-card__cnt js-profile-cnt">
-      <div class="profile-card__name"><%= current_user.username%></div>
-      <div class="profile-card__txt"> Developer from <strong>Philippines</strong></div>
-      <div class="profile-card-loc">
-        <span class="profile-card-loc__icon">
-            <i class="fa fa-map-marker"></i>
-        </span>
-        <span class="profile-card-loc__txt">
-          Manila, Philippines
-        </span>
-      </div>
-
-      <div class="profile-card-inf">
-        <div class="profile-card-inf__item">
-          <div class="profile-card-inf__title">999</div>
-          <div class="profile-card-inf__txt">Followers</div>
+      <div class="profile">
+        <div class="profile__img">
+                <img src="https://s.gravatar.com/avatar/ea8be90cf21a6f11a0e5a1cd9b9ebc47?s=80">
         </div>
 
-        <div class="profile-card-inf__item">
-          <div class="profile-card-inf__title">65</div>
-          <div class="profile-card-inf__txt">Following</div>
-        </div>
+        <div class="center">
+          <div class="profile__name"><%= current_user.username%></div>
+             <div class="profile__txt"> Developer from <strong>Philippines</strong></div>
+                 <div class="profile__loc">
+                     <span class="profile__loc__icon">
+                        <i class="fa fa-map-marker"></i>
+                      </span>
+                      <span class="profile__txt">
+                        Manila, Philippines
+                      </span>
+           </div>
+          <div class="info">
+            <div class="profile__info__item">
+                <div class="profile__info__title">999</div>
+                <div class="profile__info__txt">Followers</div>
+            </div>
 
-        <div class="profile-card-inf__item">
-          <div class="profile-card-inf__title">123</div>
-          <div class="profile-card-inf__txt">Articles</div>
-        </div>
+            <div class="profile__info__item">
+                <div class="profile__info__title">65</div>
+                <div class="profile__info__txt">Following</div>
+            </div>
 
-        <div class="profile-card-inf__item">
-          <div class="profile-card-inf__title">85</div>
-          <div class="profile-card-inf__txt">Works</div>
-        </div>
-      </div>
-      <div class="profile-card-social">
-        <a href="#" class="profile-card-social__item facebook">
-          <i class="fa fa-facebook"></i>
-        </a>
+            <div class="profile__info__item">
+                <div class="profile__info__title">123</div>
+                <div class="profile__info__txt">Articles</div>
+            </div>
 
-        <a href="#" class="profile-card-social__item twitter" >
-          <span class="icon-font">
-          <i class="fa fa-github"></i>
-          </span>
-        </a>
-        <a href="#" class="profile-card-social__item instagram" >
-          <span class="icon-font">
-             <i class="fa fa-twitter"></i>
-          </span>
-        </a>
-      </div>
-    </div>
+            <div class="profile__info__item">
+                <div class="profile__info__title">85</div>
+                <div class="profile__info__txt">Works</div>
+            </div>
+          </div>
+          <div class="icons">
+            <a href="#" class="profile__icons">
+              <i class="fa fa-facebook"></i>
+            </a>
+
+            <a href="#" class="profile__icons" >
+              <span class="icon-font">
+              <i class="fa fa-github"></i>
+              </span>
+            </a>
+            <a href="#" class="profile__icons" >
+              <span class="icon-font">
+                <i class="fa fa-twitter"></i>
+              </span>
+            </a>
+          </div>
+        </div>
     </div>
   </div>
 </div>

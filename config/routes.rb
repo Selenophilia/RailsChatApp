@@ -12,10 +12,4 @@ Rails.application.routes.draw do
   get '/messages/t/:conversation_id' => 'messages#show', as: 'messages_show'
 
   post '/conversations' => 'conversation#create', as: 'create_conversation_messages'
-
-
-  # resources :conversations do
-  #   resources :messages
-  #  end
-
 end

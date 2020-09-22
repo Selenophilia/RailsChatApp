@@ -1,23 +1,19 @@
-
-body{
-    background-color: #F5F5F5;
-}  
-.login__form {
+.entry {
     width: 340px;
     margin: 30px auto;
 }
-.login__form form {
+.entry form {
     margin-bottom: 15px;
     background: #f7f7f7;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     padding: 30px;
 }
-.login__form h2 {
+.entry h2 {
     margin: 0 0 15px;
     text-align: center;
     font-weight: bold;
 }
-.login__form .hint-text {
+.entry .hint-text {
     color: #777;
     padding-bottom: 15px;
     text-align: center;
@@ -32,16 +28,12 @@ body{
 }
 
 
-.or__seperator hr {
+.entry__seperator hr {
     margin: 20px 0 10px;
     border: 0;
     height: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.input__group-addon .fa{
-    font-size: 18px;
 }
 
 .btn-primary {

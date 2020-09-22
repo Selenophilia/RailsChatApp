@@ -4,18 +4,24 @@ $white: #fff;
 $messagebox: #1E90FF;
 
 
+html {
+  position: relative;
 
-.avatar {
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+body{
+  background-color: #F5F5F5;
+}
+
+.navbar-link {
     color: #fff;
     font-size: 1.5rem;
-  }
-
-  .gravatar {
-    max-height:30px;
-    border-radius: 15px;
-    width:auto;
-    vertical-align:middle;
-  }
+}
 
 .navbar div.logo a{
     font-weight: 100;
@@ -36,11 +42,6 @@ $messagebox: #1E90FF;
 .navbar div.dropdown .navbar-link:hover{
   text-decoration: none;
   color: #101010;
-}
-
-
-i{
-  margin-right: 3px;
 }
 
 .chat i{
