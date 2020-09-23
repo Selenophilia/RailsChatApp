@@ -1,11 +1,44 @@
+
 <% if current_user.username == message.user.username%>
-<%= message.user.username%>
-     <div class="message__content" id="message-container">                
-          <%= message.message_body %>                   
-          <div class="text-right">
-               <small>
-                    <%= message.created_at %>
-               </small> 
-          </div> 
+    
+     <div class="chat__message__container"  >
+          <div class="row no-gutters">
+               <div class="col-auto text-center">
+                    <img class="gravatar" src="https://s.gravatar.com/avatar/ea8be90cf21a6f11a0e5a1cd9b9ebc47?s=80">
+               </div>
+                    <div class="col">
+                         <%= message.user.username%>
+                              <div class="message__content" >                
+                                   <%= message.message_body %>                   
+                                   <div class="text-right">
+                                        <small>
+                                             <%= message.created_at %>
+                                        </small> 
+                                   </div> 
+                              </div>
+                    </div>
+           </div>
      </div>
+   
+<%else%>
+     <div class="chat__message__container" id="message-container" >
+          <div class="row no-gutters"> 
+               <div class="col-auto text-center">
+                    <img class="gravatar" src="https://s.gravatar.com/avatar/ea8be90cf21a6f11a0e5a1cd9b9ebc47?s=80">
+
+               </div>
+
+               <div class="col">
+                    <%= message.user.username%>
+                         <div class="guess__message__content" id="message-input">                
+                              <%= message.message_body %>                   
+                              <div class="text-right">
+                                   <small>
+                                        <%= message.created_at %>
+                                   </small> 
+                              </div> 
+                         </div>
+               </div>
+          </div>
+    </div>
 <% end %>

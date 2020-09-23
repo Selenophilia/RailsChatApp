@@ -1,56 +1,55 @@
-
-body{
-    background-color: #FFF;
-}  
-.login__form {
+.entry {
     width: 340px;
     margin: 30px auto;
 }
-.login__form form {
+.entry form {
     margin-bottom: 15px;
     background: #f7f7f7;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     padding: 30px;
 }
-.login__form h2 {
+.entry h2 {
     margin: 0 0 15px;
+    text-align: center;
+    font-weight: bold;
 }
-.login__form .hint-text {
+.entry .hint-text {
     color: #777;
     padding-bottom: 15px;
     text-align: center;
 }
-.form__control, .btn {
+
+.btn{
     min-height: 38px;
-    border-radius: 2px;
-}
-.login__btn {        
-    font-size: 15px;
+    margin: 10px 0 10px 0;  
+    border-radius: 5px;
     font-weight: bold;
+    font-size: 20px;
 }
-.or__seperator {
+
+
+.entry__seperator hr {
     margin: 20px 0 10px;
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary {
+    width: 100%;
+}
+
+.btn-success{
+    font-size: 16px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+
+.actions .text-primary{
+    display:block;
     text-align: center;
-    border-top: 1px solid #ccc;
-}
-.or__seperator i {
-    padding: 0 10px;
-    background: #f7f7f7;
-    position: relative;
-    top: -11px;
-    z-index: 1;
-}
-.social__btn .btn {
-    margin: 10px 0;
-    font-size: 15px;
-    text-align: left; 
-    line-height: 24px;       
-}
-.social__btn .btn i {
-    float: left;
-    margin: 4px 15px  0 5px;
-    min-width: 15px;
-}
-.input__group-addon .fa{
-    font-size: 18px;
+    font-size: 1rem;
+    margin-top: 2px;
 }

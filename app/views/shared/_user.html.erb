@@ -1,0 +1,19 @@
+<div class="mb-3">
+    <h1 class="display-4"> Messages </h1>
+      <% if @users.present?%>
+      <nav class="nav flex-column">
+        <% @users.each do |user| %>
+            <div class="col-auto nav-link room-nav-link">
+                    <img class="gravatar" src="https://s.gravatar.com/avatar/ea8be90cf21a6f11a0e5a1cd9b9ebc47?s=80">
+                     <div class='status-circle'>
+                    </div>
+                    <%= link_to user.username , create_conversation_messages_path(sender_id: current_user.id, recipient_id: user.id), method: :post%>                  
+               </div>
+        <% end %>    
+      </nav>
+      <% else %>
+         <div class="text-muted">
+            You have no friends yet
+        </div>
+      <% end %>
+</div>

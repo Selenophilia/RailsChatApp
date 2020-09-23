@@ -9,10 +9,17 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # POST /resource
-  # def create
-  #   super
-  # end
+#  POST /resource
+  def create
+    super do |user|
+      unless user.persisted?
+        clean_up_passwords user
+        set_minimum_password_length
+        redirect_back(fallback_location: '/users/sign_up')
+        return
+      end
+    end
+  end
 
   # GET /resource/edit
   # def edit
