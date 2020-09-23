@@ -6,7 +6,7 @@ class MessagesControllerTest < ActionDispatch::IntegrationTest
     @user         = users(:user)
     @message      = messages(:messages)
   end
-  test "1.should  create message create message route is called" do
+  test "1.should create a message when create message route is called" do
     post messages_path,params: {messages:{ user_id: @user.id, conversation_id:@conversation.id, message_body: @message.message_body}}
     assert_response :redirect 
   end 
