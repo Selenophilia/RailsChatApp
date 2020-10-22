@@ -6,7 +6,7 @@
 
    </div>
    <div class="col mt-5">
-      <div class="chat" data-channel-subscribe="chatroom" id="message-container" data-user-id="<%= current_user.id %>">
+      <div class="chat" data-channel-subscribe="chatroom" id="message-container" data-conversation-id="<%= params[:conversation_id]%>">
           <%= render @messages, :formats => :html %>     
       </div>
 
